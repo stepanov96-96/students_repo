@@ -1,0 +1,5 @@
+name = input('Введите свое имя: ')
+age = int(input('Введите совой возраст: '))
+print('Привет ' + name +'! Тебе ' + str(age) + ' лет.')
+print(name, type(name))
+print(age, type(age))
