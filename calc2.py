@@ -6,11 +6,11 @@ if znak == "/":
         print(0.0)
     else:
         print(odin / dva)
-if znak == "-":
+elif znak == "-":
     print(odin - dva)
-if znak == "+":
+elif znak == "+":
     print(odin + dva)
-if znak == "*":
+elif znak == "*":
     print(odin * dva)
-if znak != "/" and znak != "*" and znak != "+" and znak != "-":
+elif znak != "/" and znak != "*" and znak != "+" and znak != "-":
     print("Неверная операция")
