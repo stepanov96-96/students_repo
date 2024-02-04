@@ -1,0 +1,5 @@
+name = input("Введите ваше имя: ") 
+age = input("Введите ваш возраст: ") 
+print("Привет, " + name + "! Тебе " + age + " лет.") 
+print("Тип переменной name:", type(name)) 
+print("Тип переменной age:", type(age))
