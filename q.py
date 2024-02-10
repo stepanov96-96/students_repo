@@ -1,0 +1,6 @@
+print("Hello World")
+name = input("Введите ваше имя: ")
+age = int(input("Введите ваш возраст: "))
+print(f"Привет {name}! Тебе {age} лет.")
+print(f"Тип переменной 'name': {type(name)}")
+print(f"Тип переменной 'age': {type(age)}")
