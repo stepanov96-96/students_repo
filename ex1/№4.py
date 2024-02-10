@@ -1,0 +1,7 @@
+print("Введите целое число:")
+a_str = input()
+a = int(a_str)
+print("Введите нецелое число:")
+b_str = input()
+b = float(b_str)
+print(f"целое число: {a}, нецелое число {b}")
