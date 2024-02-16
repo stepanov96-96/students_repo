@@ -36,7 +36,7 @@ while True:
         if guess.upper() == 'E':
             print()
             print(f'Игра окончена. Ваш рекорд: {score} Social Credit.')
-            break
+            exit()
 
         if not guess.isdigit() or len(guess) != 1:
             print('Боже, что вы за ****?!!! НАПИСАНО ЖЕ ПРОСТЫМИ СЛОВАМИ!!! Вы должны ввести одно число от 0 до 9!!!')
