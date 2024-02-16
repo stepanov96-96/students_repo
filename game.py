@@ -7,7 +7,7 @@ def show_menu():
     print("Меню:")
     print("1. Начать игру")
     print("2. Правила игры")
-    print("3. Закончить игру")
+    print("3. Выйти отсюда..")
 
 def handle_menu_choice(current_high_score, nickname):
     choice = input("Выберите действие (1-3): ")
