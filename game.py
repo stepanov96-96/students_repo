@@ -32,9 +32,13 @@ def play_game(current_high_score, nickname):
         pc_number = ''.join([generate_number() for _ in range(4)])
         print("ПК загадал число. У вас", lives, "healthpoint.")
 
-        user_input = input("Введите четырехзначное число: ")
+        user_input = input("Введите число: ")
 
-        correct_digits = sum([1 for i in range(4) if user_input[i] in pc_number])
+        if len(user_input) != 1 or not user_input.isdigit():
+            print("Пожалуйста, введите одно число.")
+            continue
+
+        correct_digits = sum([1 for i in range(1) if user_input[i] in pc_number])
         print("Вы угадали", correct_digits, "цифр.")
 
         score += correct_digits * 10
