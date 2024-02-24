@@ -1,0 +1,48 @@
+import random
+
+
+def generate_number():
+    return random.randint(1000, 9999)
+
+
+def check_guess(answer, guess):
+    score = 0
+    for digit in guess:
+        if digit in answer:
+            score += 10
+    return score
+
+
+def game():
+    pc_number = str(generate_number())
+    lives = 3
+    score = 0
+    record = 0
+
+    while lives > 0:
+        user_guess = input("Введите 4-значное число: ")
+        if len(user_guess) != 4 or not user_guess.isdigit():
+            print("Пожалуйста, введите 4-значное число")
+            continue
+
+        user_score = check_guess(pc_number, user_guess)
+        score += user_score
+
+        if user_score == 0:
+            lives -= 1
+
+        if score > record:
+            record = score
+
+        print(f"Ваш счет: {score}, Жизни: {lives}")
+
+        if lives == 0:
+            print(f"Вы проиграли! Ваш счет: {score}, Ваш рекорд: {record}")
+            play_again = input("Хотите попробовать еще раз? (да/нет): ")
+            if play_again.lower() == "да":
+                game()
+            else:
+                break
+
+
+game()
