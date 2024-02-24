@@ -1,0 +1,47 @@
+import random
+
+def generate_number():
+    return [random.randint(0, 9) for _ in range(4)]
+
+def check_guess(secret_number, player_guess):
+    score = 0
+    for num in player_guess:
+        if num in secret_number:
+            score += 10
+    return score
+
+def game():
+    lives = 3
+    score = 0
+    high_score = 0
+    repeat = True
+
+    while repeat:
+        secret_number = generate_number()
+        player_guess = []
+        
+        while lives > 0:
+            player_guess = [int(x) for x in input("Введите 4-х значное число: ")]
+            if len(player_guess) != 4:
+                print("Пожалуйста введите 4-х значное число.")
+                continue
+            
+            score += check_guess(secret_number, player_guess)
+            print("Текущий результат:", score)
+            
+            lives -= 1
+            print("Оставшиеся жизни:", lives)
+        
+        if score > high_score:
+            high_score = score
+        
+        print("Игра окончена! Общий счет:", score, "Высший балл:", high_score)
+        
+        repeat_input = input("Хотели бы вы сыграть еще раз? (да/нет): ")
+        if repeat_input.lower() != 'да':
+            repeat = False
+        else:
+            lives = 3
+            score = 0
+
+game()
