@@ -22,7 +22,7 @@ def game():
             print("* * * *")
             guess = input("Введите цифру от 0 до 9: ")
 
-            if guess == "E":
+            if guess.lower() == "E":
                 print("Выход из игры...")
                 break
 
